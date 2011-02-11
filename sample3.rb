@@ -1,39 +1,37 @@
 
-require './post_script'
+$ps.page :sample3, [700, 700] do
 
-page :sample3, [700, 700] do
-
-  tetra0 do
-    tetragon [-120, 0], [0, 120], [120, 0], [0, -120], :red
+  $ps.tetra0 do
+    $ps.tetragon [-120, 0], [0, 120], [120, 0], [0, -120], :red
   end
 
-  tetra1 do
-    tetragon [-200, 0], [0, 200], [200, 0], [0, -200], :green
+  $ps.tetra1 do
+    $ps.tetragon [-200, 0], [0, 200], [200, 0], [0, -200], :green
   end
 
-  tetra2 do
-    tetragon [-320, 0], [0, 320], [320, 0], [0, -320], :blue
+  $ps.tetra2 do
+    $ps.tetragon [-320, 0], [0, 320], [320, 0], [0, -320], :blue
   end
 
-  bgcolor :black
+  $ps.bgcolor :black
 
-  translate [350, 350]
+  $ps.translate [350, 350]
 
   45.times do |t|
-    tetra0
-    right 4
+    $ps.tetra0
+    $ps.right 4
   end
 
   45.times do |t|
-    tetra1
-    right 4
+    $ps.tetra1
+    $ps.right 4
   end
 
   45.times do |t|
-    tetra2
-    right 4
+    $ps.tetra2
+    $ps.right 4
   end
 
 end
 
-preview :sample3
+$ps.preview :sample3

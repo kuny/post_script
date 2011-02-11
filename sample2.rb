@@ -1,89 +1,88 @@
-require './post_script'
 
-page :sample2, [700, 700] do
+$ps.page :sample2, [700, 700] do
 
-  line1 do
-    line [0, 0], [100, 0], :black
+  $ps.line1 do
+    $ps.line [0, 0], [100, 0], :black
   end
 
-  rhombus do
+  $ps.rhombus do
 
-    line1
+    $ps.line1
 
-    left 60
-    line1
+    $ps.left 60
+    $ps.line1
 
-    back
-    translate [100, 0]
-    left 60
-    line1
+    $ps.back
+    $ps.translate [100, 0]
+    $ps.left 60
+    $ps.line1
 
-    translate [50, 0]
-    left 120
-    line1
+    $ps.translate [50, 0]
+    $ps.left 120
+    $ps.line1
 
-    back
-    translate [50, 0]
-    left 120
-    line1    
+    $ps.back
+    $ps.translate [50, 0]
+    $ps.left 120
+    $ps.line1    
 
   end
 
-  hexagon do
+  $ps.hexagon do
     3.times do |t|
-      rhombus
-      right 60
+      $ps.rhombus
+      $ps.right 60
     end
   end
 
-  move_right do
-    translate [100, 0]
-    right 60
-    translate [100, 0]
-    left 60
+  $ps.move_right do
+    $ps.translate [100, 0]
+    $ps.right 60
+    $ps.translate [100, 0]
+    $ps.left 60
   end
 
-  move_left do
-    right 60
-    translate [-100, 0]
-    left 60
-    translate [-100, 0]
+  $ps.move_left do
+    $ps.right 60
+    $ps.translate [-100, 0]
+    $ps.left 60
+    $ps.translate [-100, 0]
   end
 
-  move_up do
-    right 30
-    translate [0, 100]
-    left 30
-    translate [100, 0]
+  $ps.move_up do
+    $ps.right 30
+    $ps.translate [0, 100]
+    $ps.left 30
+    $ps.translate [100, 0]
   end
 
-  bgcolor :white
+  $ps.bgcolor :white
 
-  translate [180, 120]
-  left 30
+  $ps.translate [180, 120]
+  $ps.left 30
 
   3.times do |t|
-    hexagon
-    move_right
+    $ps.hexagon
+    $ps.move_right
   end
     
   3.times do |t|
-    move_left
+    $ps.move_left
   end
-  move_up
+  $ps.move_up
 
   2.times do |t|
-    hexagon
-    move_right
+    $ps.hexagon
+    $ps.move_right
   end
 
   2.times do |t|
-    move_left
+    $ps.move_left
   end
-  move_up
+  $ps.move_up
 
-  hexagon
+  $ps.hexagon
 
 end
 
-preview :sample2
+$ps.preview :sample2
