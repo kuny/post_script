@@ -2,7 +2,7 @@ require 'yaml'
 require './numeric'
 require './string'
 
-class Object
+class PostScript
 
   X = 0
   Y = 1
